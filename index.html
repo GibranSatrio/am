@@ -1,0 +1,643 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alight Motion Premium</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Upgrade your Alight Motion experience with premium features. Instant activation, secure payment, and 24/7 support.">
+    <meta name="keywords" content="Alight Motion, Premium, Upgrade, Pro Subscription, Video Editor, Motion Graphics">
+    <meta name="author" content="Alight Motion Premium">
+
+    <!-- Open Graph (Facebook/Line/Discord) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://am.api888.dev/">
+    <meta property="og:title" content="Alight Motion Premium">
+    <meta property="og:description" content="Unlock pro features today. Fast, secure, and instant activation system.">
+    <meta property="og:image" content="https://am.api888.dev/assets/og-image.jpg">
+    <meta property="og:locale" content="th_TH">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alight Motion Premium">
+    <meta name="twitter:description" content="Unlock pro features today. Fast, secure, and instant activation system.">
+    <meta name="twitter:image" content="https://am.api888.dev/assets/og-image.jpg">
+    
+    <script src="js/api.js" async="" defer=""></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="css/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet (External for caching) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+                <button onclick="toggleLangMenu()" class="lang-btn">
+            <i class="fa-solid fa-globe"></i>
+            <span>EN</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div id="lang-menu" class="lang-menu">
+                            <a href="/en" class="lang-item active">
+                    <strong>US</strong> English                </a>
+                            <a href="/th" class="lang-item ">
+                    <strong>TH</strong> ไทย                </a>
+                            <a href="/id" class="lang-item ">
+                    <strong>ID</strong> Indonesia                </a>
+                            <a href="/ms" class="lang-item ">
+                    <strong>MY</strong> Melayu                </a>
+                            <a href="/tl" class="lang-item ">
+                    <strong>PH</strong> Filipino                </a>
+                    </div>
+    </div>
+
+    <!-- Main Card -->
+    <main class="main-card">
+        <!-- Header -->
+        <div class="card-header">
+            <img src="images/icon.png" alt="Logo">
+            <div>
+                <h1>Alight Motion <span>Premium</span></h1>
+                <p>Unlock Pro Features</p>
+            </div>
+        </div>
+        
+        <div class="card-body">
+            <!-- Stepper -->
+            <div class="stepper">
+                <div class="step">
+                    <div id="step-1-icon" class="step-icon active"><i class="fa-solid fa-user"></i></div>
+                    <span class="step-label">Identify</span>
+                </div>
+                <div id="step-line-1" class="step-line"></div>
+                <div class="step">
+                    <div id="step-2-icon" class="step-icon inactive"><i class="fa-solid fa-shield"></i></div>
+                    <span class="step-label">Verify</span>
+                </div>
+                <div id="step-line-2" class="step-line"></div>
+                <div class="step">
+                    <div id="step-3-icon" class="step-icon inactive"><i class="fa-solid fa-check"></i></div>
+                    <span class="step-label">Complete</span>
+                </div>
+            </div>
+            
+            <!-- Step 1: Email -->
+            <div id="view-step-1">
+                <div class="form-group" data-aos="fade-up">
+                    <label><i class="fa-solid fa-at"></i> Your Email</label>
+                    <input type="email" id="email" class="brutal-input" placeholder="name@example.com">
+                </div>
+                
+                <div class="turnstile-container" data-aos="fade-up" data-aos-delay="100">
+                    <div id="main-turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAACLTsFnkWuzV5cB-" data-language="en"></div>
+                </div>
+                
+                <button onclick="handleRequestCode()" id="btn-req" class="brutal-btn brutal-btn-primary" data-aos="fade-up" data-aos-delay="200">
+                    <span>Send Verification</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                
+                <button onclick="document.getElementById('howto-modal').classList.remove('hidden')" class="brutal-btn brutal-btn-outline" style="margin-top: 0.75rem;" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span>How to Use</span>
+                </button>
+            </div>
+            
+            <!-- Step 2: Verification -->
+            <div id="view-step-2" class="hidden">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <div style="width: 60px; height: 60px; background: #3B82F6; border: 3px solid #1A1A1A; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fa-solid fa-envelope" style="font-size: 1.5rem; color: white;"></i>
+                    </div>
+                    <h2 style="font-size: 1.25rem; font-weight: 700; text-transform: uppercase;">Check Your Email</h2>
+                    <p style="color: #6B7280; font-size: 0.875rem;">We've sent a verification link to your email. Click the link, then paste it below.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fa-solid fa-key"></i> Verification Link</label>
+                    <textarea id="code" rows="3" class="brutal-input" style="font-family: monospace; font-size: 0.875rem; resize: none;" placeholder="Paste link https://... or oobCode=... here"></textarea>
+                </div>
+                
+                <button onclick="handleActivate()" id="btn-act" class="brutal-btn brutal-btn-blue">
+                    <span>Activate Premium</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+                
+                <button onclick="restart()" class="brutal-btn brutal-btn-outline" style="margin-top: 0.75rem;">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back</span>
+                </button>
+            </div>
+            
+            <!-- Step 3: Success -->
+            <div id="view-step-3" class="hidden success-card">
+                <div class="success-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                
+                <h2 class="success-title">Congratulations!</h2>
+                <p class="success-subtitle">Premium Activated</p>
+                
+                <div class="info-box">
+                    <div class="info-box-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <div class="info-box-label">Your Email</div>
+                        <div class="info-box-value" id="success-email">-</div>
+                    </div>
+                </div>
+                
+                <div class="info-box" style="background: #FEF3C7;">
+                    <div class="info-box-icon" style="background: #FBBF24; color: #1A1A1A;"><i class="fa-solid fa-calendar"></i></div>
+                    <div>
+                        <div class="info-box-label">Expires</div>
+                        <div class="info-box-value" id="success-expiry">-</div>
+                    </div>
+                </div>
+                
+                <button onclick="location.reload()" class="brutal-btn brutal-btn-green" style="margin-top: 1rem;">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Done</span>
+                </button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <a href="https://t.me/SPWMRK" target="_blank" class="footer-link footer-link-blue">
+            <i class="fa-brands fa-telegram"></i>
+            <span>Contact Us</span>
+        </a>
+        <button onclick="document.getElementById('donate-modal').classList.remove('hidden')" class="footer-link footer-link-pink">
+            <i class="fa-solid fa-heart"></i>
+            <span>Donate</span>
+        </button>
+                <a href="/en/documents" class="footer-link footer-link-yellow">
+            <i class="fa-solid fa-book"></i>
+            <span>API Docs</span>
+        </a>
+    </footer>
+    
+    <!-- Donate Modal -->
+    <div id="donate-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <span><i class="fa-solid fa-gift"></i> Support Us!</span>
+                <button onclick="closeDonateModal()" class="modal-close">✕</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: #6B7280; margin-bottom: 1rem; text-align: center;">Paste TrueMoney voucher link below</p>
+                
+                <div class="form-group">
+                    <label><i class="fa-solid fa-link"></i> Voucher Link</label>
+                    <input type="text" id="voucher-link" class="brutal-input" placeholder="https://gift.truemoney.com/campaign/?v=...">
+                </div>
+                
+                <div class="turnstile-container">
+                    <div id="donate-turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAACLTsFnkWuzV5cB-" data-language="en"></div>
+                </div>
+                
+                <button onclick="processDonation()" id="donate-btn" class="brutal-btn brutal-btn-pink">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Donate</span>
+                </button>
+                
+                <p style="text-align: center; font-size: 0.75rem; color: #6B7280; margin-top: 1rem;">
+                    <i class="fa-solid fa-heart" style="color: #EC4899;"></i> Your support helps us keep this service running                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Howto Modal -->
+    <div id="howto-modal" class="modal-overlay hidden" onclick="if(event.target === this) this.classList.add('hidden')">
+        <div class="modal-card">
+            <div class="modal-header" style="background: #3B82F6;">
+                <span><i class="fa-solid fa-circle-question"></i> How to Use</span>
+                <button onclick="document.getElementById('howto-modal').classList.add('hidden')" class="modal-close">✕</button>
+            </div>
+            <div class="modal-body">
+                <ol class="howto-list">
+                    <li>
+                        <span class="howto-number">1</span>
+                        <span>Enter your email to upgrade</span>
+                    </li>
+                    <li>
+                        <span class="howto-number">2</span>
+                        <span>Complete captcha and click Continue</span>
+                    </li>
+                    <li>
+                        <span class="howto-number">3</span>
+                        <span>We'll send a verification link to your Inbox</span>
+                    </li>
+                    <li>
+                        <span class="howto-number">4</span>
+                        <span>Copy the link you received (or click it)</span>
+                    </li>
+                    <li>
+                        <span class="howto-number">5</span>
+                        <span>Paste the link and click Activate Premium</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- CDN Libraries (deferred for performance) -->
+    <script defer="" src="js/confetti.browser.min.js"></script>
+    <script defer="" src="js/vanilla-tilt.min.js"></script>
+    <script defer="" src="js/aos.js"></script>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // Translations from PHP
+        const T = {"site":{"title":"Alight Motion Premium","description":"Upgrade your Alight Motion to Premium for free"},"header":{"home":"Home","docs":"API Docs","donate":"Donate"},"hero":{"badge":"Free Premium Upgrade","title":"Alight Motion","subtitle":"Premium","description":"Unlock all premium features for free. Enter your email to get started.","cta":"Upgrade Now"},"email_form":{"label":"Your Email","placeholder":"Enter email linked to Alight Motion","submit":"Send Verification","sending":"Sending..."},"verification":{"title":"Check Your Email","description":"We've sent a verification link to your email. Click the link, then paste it below.","label":"Verification Link","placeholder":"Paste link https:\/\/... or oobCode=... here","submit":"Activate Premium","activating":"Verifying...","back":"Back"},"success":{"title":"Congratulations!","subtitle":"Premium Activated","expires":"Expires","done":"Done"},"features":{"title":"Premium Features","feature1":{"title":"All Effects Unlocked","description":"Access every premium effect and transition"},"feature2":{"title":"No Watermark","description":"Export videos without any watermark"},"feature3":{"title":"Priority Support","description":"Get help faster from our team"}},"stats":{"users":"Users Upgraded","success_rate":"Success Rate","uptime":"Uptime"},"developer":{"title":"Developer API","description":"Integrate premium upgrades into your own applications","cta":"View Documentation"},"donate":{"title":"Support Us!","description":"Paste TrueMoney voucher link below","label":"Voucher Link","placeholder":"https:\/\/gift.truemoney.com\/campaign\/?v=...","submit":"Donate","processing":"Processing...","thanks":"Your support helps us keep this service running"},"footer":{"copyright":"© 2026 Alight Motion Premium. All rights reserved.","contact":"Contact Us","donate":"Donate","docs":"API Docs"},"errors":{"email_required":"Please enter your email","invalid_email":"Please enter a valid email","captcha_required":"Please complete the captcha","link_required":"Please paste the verification link","voucher_required":"Please paste the voucher link","invalid_voucher":"Invalid voucher link format","connection_error":"Connection error. Please try again.","generic_error":"An error occurred. Please try again."},"messages":{"email_sent":"Verification email sent!","premium_activated":"Premium activated successfully!","donation_success":"Thank you for your support!"},"howto":{"title":"How to Use","step1":"Enter your email to upgrade","step2":"Complete captcha and click Continue","step3":"We'll send a verification link to your Inbox","step4":"Copy the link you received (or click it)","step5":"Paste the link and click Activate Premium","understand":"Got it"},"stepper":{"step1":"Identify","step2":"Verify","step3":"Complete"},"toast":{"email_required":"Please enter your email first","turnstile_required":"Please complete the captcha","captcha_required":"Please complete the captcha","code_required":"Please enter the verification code","sending":"Sending...","loading":"Loading...","activating":"Activating...","processing":"Processing...","email_sent":"Verification link sent to your email","activation_success":"Activation successful!","error_prefix":"Error: ","unknown_error":"Unknown error","verifying":"Verifying...","success_activated":"Activated successfully! Expires: ","unknown_expiry":"Unknown","voucher_required":"Please paste the voucher link","invalid_voucher":"Invalid link format. Please paste TrueMoney link","donation_thanks":"Thank you {donor}! Received {amount} Baht 💝","supporter":"Supporter","connection_error":"Connection error","network_error":"Network error. Please try again.","system_error":"System error. Please try again.","link_required":"Please enter the link","invalid_link":"Invalid link","email_not_found":"Email not found. Please enter email in step 1","invalid_oobcode":"Cannot extract verification code from URL. Please try again","failed_send":"Failed to send verification code","activation_failed":"Activation failed","donation_failed":"Donation failed","success":"Success!"},"docs":{"title":"API Documentation","subtitle":"Developer Documentation","home":"Home","nav":{"getting_started":"Getting Started","resources":"Resources","introduction":"Introduction","authentication":"Authentication","endpoints":"Endpoints","error_codes":"Error Codes"},"intro":{"title":"Alight Motion Premium API","description":"Integrate Alight Motion premium upgrades directly into your applications. Our API provides a simple, secure, and reliable way to verify emails and activate subscriptions programmatically.","base_url":"Base URL"},"auth":{"title":"Authentication","description":"All API requests must include an X-API-Key header for authentication.","need_key_title":"Need an API Key?","need_key_desc":"Contact the administrator to request an API key. Keys are rate-limited and monitored for abuse."},"endpoints":{"title":"Endpoints","verify_email_desc":"Send a verification email to initiate the upgrade process","activate_desc":"Activate premium license using the code received in email","request_body":"Request Body","request":"Request","response":"Response"},"errors":{"title":"Error Codes","http":"HTTP","code":"Code","description":"Description"},"error_list":{"missing_api_key":"Request header missing X-API-Key","invalid_api_key":"API Key is invalid or not found","disabled_key":"API Key is disabled","expired_key":"API Key has expired","captcha_failed":"Captcha verification failed (Frontend only)","wait_5min":"Wait 5 minutes before sending to same email","rate_limited":"Too many requests from this IP","quota_exceeded":"Usage quota exceeded"}},"http":{"copy":"Copy","copied":"Copied!"},"not_found":{"title":"404 - Page not found","heading":"LOST IN SPACE?","desc":"The page you are looking for may have been moved, or it may never have existed.","home":"Back to home"},"api":{"captcha_failed":"Captcha verification failed","email_required":"Email is required","invalid_email":"Invalid email format","ip_rate_limited":"Too many requests from this IP. Please wait.","wait_5min":"Please wait 5 minutes before retrying","failed_send":"Failed to send verification email","quota_exceeded":"Temporary outage: Daily email sign-in quota exceeded. Please try again tomorrow.","too_many_attempts":"Too many login attempts. Please wait a moment and try again.","access_denied":"Access denied","ip_banned":"IP temporarily suspended due to unusual activity","daily_limit_exceeded":"Daily request limit exceeded. Please try again tomorrow.","email_sent":"Verification email sent successfully","request_code_event":"User requested verification email","code_sent_event":"Verification email sent successfully","activate_attempt_event":"User submitted verification code","activated_success":"Premium activated successfully","request_recovered_event":"Created new request due to missing requestId","invalid_email_address":"Invalid email address","email_and_code_required":"Email and Code are required","invalid_or_expired_code":"Invalid or expired verification code","activation_failed":"Activation Failed","invalid_action":"Invalid Action","server_error":"Server Error","donate":{"paste_voucher":"Please paste the voucher link","invalid_link":"Invalid link format. Please paste TrueMoney link","turnstile_failed":"Please complete the captcha","service_unavailable":"Donation system is currently unavailable","invalid_link_short":"Invalid link","duplicate_voucher":"This voucher was already used","verify_failed":"Cannot verify voucher","redeem_failed":"Cannot redeem voucher","thanks":"Thank you for your support!"}}};
+        const currentLang = 'en';
+        
+        // Language menu toggle
+        function toggleLangMenu() {
+            document.getElementById('lang-menu').classList.toggle('show');
+        }
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.lang-switcher')) {
+                document.getElementById('lang-menu').classList.remove('show');
+            }
+        });
+        
+        // Toast function
+        function showToast(type, message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            
+            const icons = {
+                success: 'fa-check-circle',
+                error: 'fa-times-circle',
+                info: 'fa-info-circle',
+                warning: 'fa-exclamation-triangle'
+            };
+            
+            toast.innerHTML = `
+                <i class="fa-solid ${icons[type]}"></i>
+                <span>${message}</span>
+            `;
+            
+            container.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'toast-slide-in 0.3s ease reverse';
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+        
+        // Step management
+        let activeStep = 1;
+        let savedEmail = '';
+        
+        function setStep(num) {
+            if (activeStep === num) return;
+            
+            // Update step icons
+            const icons = [null, 
+                document.getElementById('step-1-icon'),
+                document.getElementById('step-2-icon'),
+                document.getElementById('step-3-icon')
+            ];
+            const lines = [null,
+                document.getElementById('step-line-1'),
+                document.getElementById('step-line-2')
+            ];
+            
+            // Reset all
+            icons.forEach((icon, i) => {
+                if (i === 0) return;
+                icon.className = 'step-icon inactive';
+            });
+            lines.forEach((line, i) => {
+                if (i === 0) return;
+                line.className = 'step-line';
+            });
+            
+            // Set active/completed
+            for (let i = 1; i <= num; i++) {
+                if (i < num) {
+                    icons[i].className = 'step-icon completed';
+                    if (lines[i]) lines[i].className = 'step-line active';
+                } else {
+                    icons[i].className = 'step-icon active';
+                }
+            }
+            
+            // Hide current view
+            document.getElementById(`view-step-${activeStep}`).classList.add('hidden');
+            
+            // Show new view
+            document.getElementById(`view-step-${num}`).classList.remove('hidden');
+            
+            activeStep = num;
+        }
+        
+        function restart() {
+            location.reload();
+        }
+        
+        // Close donate modal
+        function closeDonateModal() {
+            document.getElementById('donate-modal').classList.add('hidden');
+        }
+        
+        // Handle Email Request
+        async function handleRequestCode() {
+            const email = document.getElementById('email').value.trim();
+            const turnstileResponse = turnstile.getResponse('#main-turnstile');
+            
+            if (!email) {
+                showToast('error', T.toast?.email_required || 'Please enter your email');
+                return;
+            }
+            
+            if (!turnstileResponse) {
+                showToast('error', T.toast?.turnstile_required || 'Please complete the captcha');
+                return;
+            }
+            
+            const btn = document.getElementById('btn-req');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>' + (T.toast?.loading || 'Loading...') + '</span>';
+            
+            try {
+                const response = await fetch('/api/license/verify-email', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-Language': currentLang
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        turnstileToken: turnstileResponse
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    savedEmail = email;
+                    showToast('success', T.toast?.email_sent || 'Verification email sent!');
+                    setStep(2);
+                } else {
+                    showToast('error', data.message || T.toast?.failed_send || 'Failed to send verification code');
+                    turnstile.reset('#main-turnstile');
+                }
+            } catch (error) {
+                showToast('error', T.toast?.network_error || 'Network error. Please try again.');
+                turnstile.reset('#main-turnstile');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span>' + (T.email_form?.submit || 'Submit') + '</span> <i class="fa-solid fa-arrow-right"></i>';
+            }
+        }
+        
+        // Helper to extract oobCode
+        function extractOobCodeFromInput(input) {
+            let workingInput = input.trim();
+            let oobCode = '';
+            
+            if (!workingInput) return '';
+
+            // Step 1: Check if this is a Firebase Dynamic Link (page.link)
+            if (workingInput.includes('page.link') && workingInput.includes('?link=')) {
+                try {
+                    const dynamicUrl = new URL(workingInput);
+                    const encodedLink = dynamicUrl.searchParams.get('link');
+                    if (encodedLink) {
+                        workingInput = decodeURIComponent(encodedLink);
+                    }
+                } catch (e) {
+                    // Silent fail
+                }
+            }
+            
+            // Step 2: Decode multiple times
+            for (let i = 0; i < 5; i++) {
+                try {
+                    if (workingInput.includes('%')) {
+                        const decoded = decodeURIComponent(workingInput);
+                        if (decoded === workingInput) break;
+                        workingInput = decoded;
+                    } else {
+                        break;
+                    }
+                } catch (e) {
+                    break;
+                }
+            }
+            
+            // Step 3: Extract oobCode
+            if (workingInput.includes('oobCode=')) {
+                try {
+                    const url = new URL(workingInput);
+                    oobCode = url.searchParams.get('oobCode');
+                } catch (e) {
+                    const patterns = [
+                        /[?&]oobCode=([^&\s]+)/,
+                        /oobCode=([^&\s]+)/,
+                        /oobCode%3D([^&\s%]+)/
+                    ];
+                    
+                    for (const pattern of patterns) {
+                        const match = workingInput.match(pattern);
+                        if (match && match[1]) {
+                            oobCode = match[1];
+                            break;
+                        }
+                    }
+                }
+            } else {
+                oobCode = workingInput;
+            }
+            
+            return oobCode || workingInput;
+        }
+
+        // Auto-extract code on paste/input
+        const codeInputEl = document.getElementById('code');
+        if (codeInputEl) {
+            codeInputEl.addEventListener('input', function(e) {
+                const val = this.value;
+                // Only attempt extraction if it looks like a URL or contains oobCode
+                if (val.length > 20 && (val.includes('http') || val.includes('oobCode'))) {
+                    const extracted = extractOobCodeFromInput(val);
+                    if (extracted && extracted !== val && extracted.length >= 10) {
+                        this.value = extracted;
+                        
+                        // Visual feedback
+                        this.style.backgroundColor = '#dcfce7'; // light green
+                        setTimeout(() => {
+                            this.style.backgroundColor = '';
+                        }, 500);
+                    }
+                }
+            });
+        }
+
+        // Handle Activation
+        async function handleActivate() {
+            try {
+                let codeInput = document.getElementById('code').value.trim();
+                const email = savedEmail || document.getElementById('email').value.trim();
+                
+                if (!email) {
+                    showToast('error', T.toast?.email_not_found || 'Email not found. Please enter email in step 1');
+                    setStep(1); 
+                    return;
+                }
+
+                if (!codeInput) {
+                    showToast('error', T.toast?.code_required || 'Please enter the verification code');
+                    return;
+                }
+                
+                // Use helper to extract (just in case user typed cleanly or paste didn't trigger)
+                const oobCode = extractOobCodeFromInput(codeInput);
+                
+                // Validate
+                if (!oobCode || oobCode.length < 10) {
+                    showToast('error', T.toast?.invalid_oobcode || 'Cannot extract verification code from URL. Please try again');
+                    return;
+                }
+                
+                const btn = document.getElementById('btn-act');
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>' + (T.toast?.activating || 'Activating...') + '</span>';
+                
+                const response = await fetch('/api/license/activate', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-Language': currentLang
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        oobCode: oobCode
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    document.getElementById('success-email').textContent = email;
+                    document.getElementById('success-expiry').textContent = data.subscription?.expiryDateFull || data.expiryDate || 'Lifetime';
+                    
+                    showToast('success', T.toast?.activated || 'Premium activated successfully!');
+                    setStep(3);
+                    
+                    // Celebrate!
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                    });
+                } else {
+                    showToast('error', data.message || T.toast?.activation_failed || 'Activation failed');
+                }
+            } catch (error) {
+                showToast('error', T.toast?.system_error || 'System error. Please try again.');
+            } finally {
+                const btn = document.getElementById('btn-act');
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '<span>' + (T.activation_form?.submit || 'Activate Premium') + '</span> <i class="fa-solid fa-wand-magic-sparkles"></i>';
+                }
+            }
+        }
+        
+        // Process Donation
+        async function processDonation() {
+            const voucherLink = document.getElementById('voucher-link').value.trim();
+            const turnstileResponse = turnstile.getResponse('#donate-turnstile');
+            
+            if (!voucherLink) {
+                showToast('error', T.donate?.link_required || 'Please enter the voucher link');
+                return;
+            }
+            
+            if (!voucherLink.includes('gift.truemoney.com')) {
+                showToast('error', T.donate?.invalid_link || 'Invalid TrueMoney link');
+                return;
+            }
+            
+            if (!turnstileResponse) {
+                showToast('error', T.toast?.turnstile_required || 'Please complete the captcha');
+                return;
+            }
+            
+            const btn = document.getElementById('donate-btn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>' + (T.toast?.processing || 'Processing...') + '</span>';
+            
+            try {
+                const response = await fetch('/api/donate', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-Language': currentLang
+                    },
+                    body: JSON.stringify({
+                        voucher_url: voucherLink,
+                        turnstileToken: turnstileResponse
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showToast('success', T.donate?.success || 'Thank you for your donation!');
+                    closeDonateModal();
+                    document.getElementById('voucher-link').value = '';
+                } else {
+                    showToast('error', data.message || T.toast?.donation_failed || 'Donation failed');
+                }
+                
+                turnstile.reset('#donate-turnstile');
+            } catch (error) {
+                showToast('error', T.toast?.network_error || 'Network error. Please try again.');
+                turnstile.reset('#donate-turnstile');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-heart"></i> <span>' + (T.donate?.submit || 'Donate') + '</span>';
+            }
+        }
+        
+        // Initialize libraries after deferred scripts load
+        window.addEventListener('load', function() {
+            // Initialize AOS (Animate On Scroll)
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                    easing: 'ease-out-cubic'
+                });
+            }
+            
+            // Initialize Vanilla Tilt for main card
+            if (typeof VanillaTilt !== 'undefined') {
+                VanillaTilt.init(document.querySelector(".main-card"), {
+                    max: 3,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.15,
+                    scale: 1.02
+                });
+            }
+        });
+    </script>
+
+
+
+</body></html>

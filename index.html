@@ -1,8 +1,10 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="id">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Alight Motion Premium</title>
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="/assets/img/icon.png">
     <!-- SEO Meta Tags -->
     <meta name="description" content="Upgrade your Alight Motion experience with premium features. Instant activation, secure payment, and 24/7 support.">
     <meta name="keywords" content="Alight Motion, Premium, Upgrade, Pro Subscription, Video Editor, Motion Graphics">
@@ -22,15 +24,15 @@
     <meta name="twitter:description" content="Unlock pro features today. Fast, secure, and instant activation system.">
     <meta name="twitter:image" content="https://am.api888.dev/assets/og-image.jpg">
     
-    <script src="js/api.js" async="" defer=""></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- AOS Animation -->
-    <link href="css/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Main Stylesheet (External for caching) -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
@@ -38,15 +40,15 @@
     <div class="lang-switcher">
                 <button onclick="toggleLangMenu()" class="lang-btn">
             <i class="fa-solid fa-globe"></i>
-            <span>EN</span>
+            <span>ID</span>
             <i class="fa-solid fa-chevron-down"></i>
         </button>
         <div id="lang-menu" class="lang-menu">
-                            <a href="/en" class="lang-item active">
+                            <a href="/en" class="lang-item ">
                     <strong>US</strong> English                </a>
                             <a href="/th" class="lang-item ">
                     <strong>TH</strong> ไทย                </a>
-                            <a href="/id" class="lang-item ">
+                            <a href="/id" class="lang-item active">
                     <strong>ID</strong> Indonesia                </a>
                             <a href="/ms" class="lang-item ">
                     <strong>MY</strong> Melayu                </a>
@@ -59,7 +61,7 @@
     <main class="main-card">
         <!-- Header -->
         <div class="card-header">
-            <img src="images/icon.png" alt="Logo">
+            <img src="/assets/img/icon.png" alt="Logo">
             <div>
                 <h1>Alight Motion <span>Premium</span></h1>
                 <p>Unlock Pro Features</p>
@@ -71,39 +73,39 @@
             <div class="stepper">
                 <div class="step">
                     <div id="step-1-icon" class="step-icon active"><i class="fa-solid fa-user"></i></div>
-                    <span class="step-label">Identify</span>
+                    <span class="step-label">Identifikasi</span>
                 </div>
                 <div id="step-line-1" class="step-line"></div>
                 <div class="step">
                     <div id="step-2-icon" class="step-icon inactive"><i class="fa-solid fa-shield"></i></div>
-                    <span class="step-label">Verify</span>
+                    <span class="step-label">Verifikasi</span>
                 </div>
                 <div id="step-line-2" class="step-line"></div>
                 <div class="step">
                     <div id="step-3-icon" class="step-icon inactive"><i class="fa-solid fa-check"></i></div>
-                    <span class="step-label">Complete</span>
+                    <span class="step-label">Selesai</span>
                 </div>
             </div>
             
             <!-- Step 1: Email -->
             <div id="view-step-1">
                 <div class="form-group" data-aos="fade-up">
-                    <label><i class="fa-solid fa-at"></i> Your Email</label>
+                    <label><i class="fa-solid fa-at"></i> Email Anda</label>
                     <input type="email" id="email" class="brutal-input" placeholder="name@example.com">
                 </div>
                 
                 <div class="turnstile-container" data-aos="fade-up" data-aos-delay="100">
-                    <div id="main-turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAACLTsFnkWuzV5cB-" data-language="en"></div>
+                    <div id="main-turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAACLTsFnkWuzV5cB-" data-language="id"></div>
                 </div>
                 
                 <button onclick="handleRequestCode()" id="btn-req" class="brutal-btn brutal-btn-primary" data-aos="fade-up" data-aos-delay="200">
-                    <span>Send Verification</span>
+                    <span>Kirim Verifikasi</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
                 
                 <button onclick="document.getElementById('howto-modal').classList.remove('hidden')" class="brutal-btn brutal-btn-outline" style="margin-top: 0.75rem;" data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-regular fa-circle-question"></i>
-                    <span>How to Use</span>
+                    <span>Cara Penggunaan</span>
                 </button>
             </div>
             
@@ -113,23 +115,23 @@
                     <div style="width: 60px; height: 60px; background: #3B82F6; border: 3px solid #1A1A1A; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
                         <i class="fa-solid fa-envelope" style="font-size: 1.5rem; color: white;"></i>
                     </div>
-                    <h2 style="font-size: 1.25rem; font-weight: 700; text-transform: uppercase;">Check Your Email</h2>
-                    <p style="color: #6B7280; font-size: 0.875rem;">We've sent a verification link to your email. Click the link, then paste it below.</p>
+                    <h2 style="font-size: 1.25rem; font-weight: 700; text-transform: uppercase;">Cek Email Anda</h2>
+                    <p style="color: #6B7280; font-size: 0.875rem;">Kami telah mengirim link verifikasi ke email Anda. Klik link, lalu tempel di bawah.</p>
                 </div>
                 
                 <div class="form-group">
-                    <label><i class="fa-solid fa-key"></i> Verification Link</label>
-                    <textarea id="code" rows="3" class="brutal-input" style="font-family: monospace; font-size: 0.875rem; resize: none;" placeholder="Paste link https://... or oobCode=... here"></textarea>
+                    <label><i class="fa-solid fa-key"></i> Link Verifikasi</label>
+                    <textarea id="code" rows="3" class="brutal-input" style="font-family: monospace; font-size: 0.875rem; resize: none;" placeholder="Tempel link https://... atau oobCode=... di sini"></textarea>
                 </div>
                 
                 <button onclick="handleActivate()" id="btn-act" class="brutal-btn brutal-btn-blue">
-                    <span>Activate Premium</span>
+                    <span>Aktifkan Premium</span>
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </button>
                 
                 <button onclick="restart()" class="brutal-btn brutal-btn-outline" style="margin-top: 0.75rem;">
                     <i class="fa-solid fa-arrow-left"></i>
-                    <span>Back</span>
+                    <span>Kembali</span>
                 </button>
             </div>
             
@@ -139,13 +141,13 @@
                     <i class="fa-solid fa-crown"></i>
                 </div>
                 
-                <h2 class="success-title">Congratulations!</h2>
-                <p class="success-subtitle">Premium Activated</p>
+                <h2 class="success-title">Selamat!</h2>
+                <p class="success-subtitle">Premium Diaktifkan</p>
                 
                 <div class="info-box">
                     <div class="info-box-icon"><i class="fa-solid fa-envelope"></i></div>
                     <div>
-                        <div class="info-box-label">Your Email</div>
+                        <div class="info-box-label">Email Anda</div>
                         <div class="info-box-value" id="success-email">-</div>
                     </div>
                 </div>
@@ -153,14 +155,14 @@
                 <div class="info-box" style="background: #FEF3C7;">
                     <div class="info-box-icon" style="background: #FBBF24; color: #1A1A1A;"><i class="fa-solid fa-calendar"></i></div>
                     <div>
-                        <div class="info-box-label">Expires</div>
+                        <div class="info-box-label">Berakhir</div>
                         <div class="info-box-value" id="success-expiry">-</div>
                     </div>
                 </div>
                 
                 <button onclick="location.reload()" class="brutal-btn brutal-btn-green" style="margin-top: 1rem;">
                     <i class="fa-solid fa-check"></i>
-                    <span>Done</span>
+                    <span>Selesai</span>
                 </button>
             </div>
         </div>
@@ -170,15 +172,15 @@
     <footer>
         <a href="https://t.me/SPWMRK" target="_blank" class="footer-link footer-link-blue">
             <i class="fa-brands fa-telegram"></i>
-            <span>Contact Us</span>
+            <span>Hubungi Kami</span>
         </a>
         <button onclick="document.getElementById('donate-modal').classList.remove('hidden')" class="footer-link footer-link-pink">
             <i class="fa-solid fa-heart"></i>
-            <span>Donate</span>
+            <span>Donasi</span>
         </button>
-                <a href="/en/documents" class="footer-link footer-link-yellow">
+                <a href="/id/documents" class="footer-link footer-link-yellow">
             <i class="fa-solid fa-book"></i>
-            <span>API Docs</span>
+            <span>Dokumentasi API</span>
         </a>
     </footer>
     
@@ -186,28 +188,28 @@
     <div id="donate-modal" class="modal-overlay hidden">
         <div class="modal-card">
             <div class="modal-header">
-                <span><i class="fa-solid fa-gift"></i> Support Us!</span>
+                <span><i class="fa-solid fa-gift"></i> Dukung Kami!</span>
                 <button onclick="closeDonateModal()" class="modal-close">✕</button>
             </div>
             <div class="modal-body">
-                <p style="color: #6B7280; margin-bottom: 1rem; text-align: center;">Paste TrueMoney voucher link below</p>
+                <p style="color: #6B7280; margin-bottom: 1rem; text-align: center;">Tempel link voucher TrueMoney di bawah</p>
                 
                 <div class="form-group">
-                    <label><i class="fa-solid fa-link"></i> Voucher Link</label>
+                    <label><i class="fa-solid fa-link"></i> Link Voucher</label>
                     <input type="text" id="voucher-link" class="brutal-input" placeholder="https://gift.truemoney.com/campaign/?v=...">
                 </div>
                 
                 <div class="turnstile-container">
-                    <div id="donate-turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAACLTsFnkWuzV5cB-" data-language="en"></div>
+                    <div id="donate-turnstile" class="cf-turnstile" data-sitekey="0x4AAAAAACLTsFnkWuzV5cB-" data-language="id"></div>
                 </div>
                 
                 <button onclick="processDonation()" id="donate-btn" class="brutal-btn brutal-btn-pink">
                     <i class="fa-solid fa-heart"></i>
-                    <span>Donate</span>
+                    <span>Donasi</span>
                 </button>
                 
                 <p style="text-align: center; font-size: 0.75rem; color: #6B7280; margin-top: 1rem;">
-                    <i class="fa-solid fa-heart" style="color: #EC4899;"></i> Your support helps us keep this service running                </p>
+                    <i class="fa-solid fa-heart" style="color: #EC4899;"></i> Dukungan Anda membantu kami terus berkembang                </p>
             </div>
         </div>
     </div>
@@ -216,30 +218,30 @@
     <div id="howto-modal" class="modal-overlay hidden" onclick="if(event.target === this) this.classList.add('hidden')">
         <div class="modal-card">
             <div class="modal-header" style="background: #3B82F6;">
-                <span><i class="fa-solid fa-circle-question"></i> How to Use</span>
+                <span><i class="fa-solid fa-circle-question"></i> Cara Penggunaan</span>
                 <button onclick="document.getElementById('howto-modal').classList.add('hidden')" class="modal-close">✕</button>
             </div>
             <div class="modal-body">
                 <ol class="howto-list">
                     <li>
                         <span class="howto-number">1</span>
-                        <span>Enter your email to upgrade</span>
+                        <span>Masukkan email yang ingin diupgrade</span>
                     </li>
                     <li>
                         <span class="howto-number">2</span>
-                        <span>Complete captcha and click Continue</span>
+                        <span>Selesaikan captcha dan klik Lanjutkan</span>
                     </li>
                     <li>
                         <span class="howto-number">3</span>
-                        <span>We'll send a verification link to your Inbox</span>
+                        <span>Kami akan mengirim link verifikasi ke Inbox Anda</span>
                     </li>
                     <li>
                         <span class="howto-number">4</span>
-                        <span>Copy the link you received (or click it)</span>
+                        <span>Salin link yang diterima (atau klik)</span>
                     </li>
                     <li>
                         <span class="howto-number">5</span>
-                        <span>Paste the link and click Activate Premium</span>
+                        <span>Tempel link dan klik Aktifkan Premium</span>
                     </li>
                 </ol>
             </div>
@@ -250,14 +252,14 @@
     <div id="toast-container"></div>
 
     <!-- CDN Libraries (deferred for performance) -->
-    <script defer="" src="js/confetti.browser.min.js"></script>
-    <script defer="" src="js/vanilla-tilt.min.js"></script>
-    <script defer="" src="js/aos.js"></script>
-    <script defer="" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         // Translations from PHP
-        const T = {"site":{"title":"Alight Motion Premium","description":"Upgrade your Alight Motion to Premium for free"},"header":{"home":"Home","docs":"API Docs","donate":"Donate"},"hero":{"badge":"Free Premium Upgrade","title":"Alight Motion","subtitle":"Premium","description":"Unlock all premium features for free. Enter your email to get started.","cta":"Upgrade Now"},"email_form":{"label":"Your Email","placeholder":"Enter email linked to Alight Motion","submit":"Send Verification","sending":"Sending..."},"verification":{"title":"Check Your Email","description":"We've sent a verification link to your email. Click the link, then paste it below.","label":"Verification Link","placeholder":"Paste link https:\/\/... or oobCode=... here","submit":"Activate Premium","activating":"Verifying...","back":"Back"},"success":{"title":"Congratulations!","subtitle":"Premium Activated","expires":"Expires","done":"Done"},"features":{"title":"Premium Features","feature1":{"title":"All Effects Unlocked","description":"Access every premium effect and transition"},"feature2":{"title":"No Watermark","description":"Export videos without any watermark"},"feature3":{"title":"Priority Support","description":"Get help faster from our team"}},"stats":{"users":"Users Upgraded","success_rate":"Success Rate","uptime":"Uptime"},"developer":{"title":"Developer API","description":"Integrate premium upgrades into your own applications","cta":"View Documentation"},"donate":{"title":"Support Us!","description":"Paste TrueMoney voucher link below","label":"Voucher Link","placeholder":"https:\/\/gift.truemoney.com\/campaign\/?v=...","submit":"Donate","processing":"Processing...","thanks":"Your support helps us keep this service running"},"footer":{"copyright":"© 2026 Alight Motion Premium. All rights reserved.","contact":"Contact Us","donate":"Donate","docs":"API Docs"},"errors":{"email_required":"Please enter your email","invalid_email":"Please enter a valid email","captcha_required":"Please complete the captcha","link_required":"Please paste the verification link","voucher_required":"Please paste the voucher link","invalid_voucher":"Invalid voucher link format","connection_error":"Connection error. Please try again.","generic_error":"An error occurred. Please try again."},"messages":{"email_sent":"Verification email sent!","premium_activated":"Premium activated successfully!","donation_success":"Thank you for your support!"},"howto":{"title":"How to Use","step1":"Enter your email to upgrade","step2":"Complete captcha and click Continue","step3":"We'll send a verification link to your Inbox","step4":"Copy the link you received (or click it)","step5":"Paste the link and click Activate Premium","understand":"Got it"},"stepper":{"step1":"Identify","step2":"Verify","step3":"Complete"},"toast":{"email_required":"Please enter your email first","turnstile_required":"Please complete the captcha","captcha_required":"Please complete the captcha","code_required":"Please enter the verification code","sending":"Sending...","loading":"Loading...","activating":"Activating...","processing":"Processing...","email_sent":"Verification link sent to your email","activation_success":"Activation successful!","error_prefix":"Error: ","unknown_error":"Unknown error","verifying":"Verifying...","success_activated":"Activated successfully! Expires: ","unknown_expiry":"Unknown","voucher_required":"Please paste the voucher link","invalid_voucher":"Invalid link format. Please paste TrueMoney link","donation_thanks":"Thank you {donor}! Received {amount} Baht 💝","supporter":"Supporter","connection_error":"Connection error","network_error":"Network error. Please try again.","system_error":"System error. Please try again.","link_required":"Please enter the link","invalid_link":"Invalid link","email_not_found":"Email not found. Please enter email in step 1","invalid_oobcode":"Cannot extract verification code from URL. Please try again","failed_send":"Failed to send verification code","activation_failed":"Activation failed","donation_failed":"Donation failed","success":"Success!"},"docs":{"title":"API Documentation","subtitle":"Developer Documentation","home":"Home","nav":{"getting_started":"Getting Started","resources":"Resources","introduction":"Introduction","authentication":"Authentication","endpoints":"Endpoints","error_codes":"Error Codes"},"intro":{"title":"Alight Motion Premium API","description":"Integrate Alight Motion premium upgrades directly into your applications. Our API provides a simple, secure, and reliable way to verify emails and activate subscriptions programmatically.","base_url":"Base URL"},"auth":{"title":"Authentication","description":"All API requests must include an X-API-Key header for authentication.","need_key_title":"Need an API Key?","need_key_desc":"Contact the administrator to request an API key. Keys are rate-limited and monitored for abuse."},"endpoints":{"title":"Endpoints","verify_email_desc":"Send a verification email to initiate the upgrade process","activate_desc":"Activate premium license using the code received in email","request_body":"Request Body","request":"Request","response":"Response"},"errors":{"title":"Error Codes","http":"HTTP","code":"Code","description":"Description"},"error_list":{"missing_api_key":"Request header missing X-API-Key","invalid_api_key":"API Key is invalid or not found","disabled_key":"API Key is disabled","expired_key":"API Key has expired","captcha_failed":"Captcha verification failed (Frontend only)","wait_5min":"Wait 5 minutes before sending to same email","rate_limited":"Too many requests from this IP","quota_exceeded":"Usage quota exceeded"}},"http":{"copy":"Copy","copied":"Copied!"},"not_found":{"title":"404 - Page not found","heading":"LOST IN SPACE?","desc":"The page you are looking for may have been moved, or it may never have existed.","home":"Back to home"},"api":{"captcha_failed":"Captcha verification failed","email_required":"Email is required","invalid_email":"Invalid email format","ip_rate_limited":"Too many requests from this IP. Please wait.","wait_5min":"Please wait 5 minutes before retrying","failed_send":"Failed to send verification email","quota_exceeded":"Temporary outage: Daily email sign-in quota exceeded. Please try again tomorrow.","too_many_attempts":"Too many login attempts. Please wait a moment and try again.","access_denied":"Access denied","ip_banned":"IP temporarily suspended due to unusual activity","daily_limit_exceeded":"Daily request limit exceeded. Please try again tomorrow.","email_sent":"Verification email sent successfully","request_code_event":"User requested verification email","code_sent_event":"Verification email sent successfully","activate_attempt_event":"User submitted verification code","activated_success":"Premium activated successfully","request_recovered_event":"Created new request due to missing requestId","invalid_email_address":"Invalid email address","email_and_code_required":"Email and Code are required","invalid_or_expired_code":"Invalid or expired verification code","activation_failed":"Activation Failed","invalid_action":"Invalid Action","server_error":"Server Error","donate":{"paste_voucher":"Please paste the voucher link","invalid_link":"Invalid link format. Please paste TrueMoney link","turnstile_failed":"Please complete the captcha","service_unavailable":"Donation system is currently unavailable","invalid_link_short":"Invalid link","duplicate_voucher":"This voucher was already used","verify_failed":"Cannot verify voucher","redeem_failed":"Cannot redeem voucher","thanks":"Thank you for your support!"}}};
-        const currentLang = 'en';
+        const T = {"site":{"title":"Alight Motion Premium","description":"Upgrade Alight Motion ke Premium gratis"},"header":{"home":"Beranda","docs":"Dokumentasi API","donate":"Donasi"},"hero":{"badge":"Upgrade Premium Gratis","title":"Alight Motion","subtitle":"Premium","description":"Buka semua fitur premium gratis. Masukkan email untuk memulai.","cta":"Upgrade Sekarang"},"email_form":{"label":"Email Anda","placeholder":"Masukkan email yang terhubung dengan Alight Motion","submit":"Kirim Verifikasi","sending":"Mengirim..."},"verification":{"title":"Cek Email Anda","description":"Kami telah mengirim link verifikasi ke email Anda. Klik link, lalu tempel di bawah.","label":"Link Verifikasi","placeholder":"Tempel link https:\/\/... atau oobCode=... di sini","submit":"Aktifkan Premium","activating":"Memverifikasi...","back":"Kembali"},"success":{"title":"Selamat!","subtitle":"Premium Diaktifkan","expires":"Berakhir","done":"Selesai"},"features":{"title":"Fitur Premium","feature1":{"title":"Semua Efek Terbuka","description":"Akses semua efek dan transisi premium"},"feature2":{"title":"Tanpa Watermark","description":"Ekspor video tanpa watermark"},"feature3":{"title":"Dukungan Prioritas","description":"Dapatkan bantuan lebih cepat"}},"stats":{"users":"Pengguna Diupgrade","success_rate":"Tingkat Keberhasilan","uptime":"Waktu Aktif"},"developer":{"title":"Developer API","description":"Integrasikan upgrade premium ke aplikasi Anda","cta":"Lihat Dokumentasi"},"donate":{"title":"Dukung Kami!","description":"Tempel link voucher TrueMoney di bawah","label":"Link Voucher","placeholder":"https:\/\/gift.truemoney.com\/campaign\/?v=...","submit":"Donasi","processing":"Memproses...","thanks":"Dukungan Anda membantu kami terus berkembang"},"footer":{"copyright":"© 2026 Alight Motion Premium. Hak cipta dilindungi.","contact":"Hubungi Kami","donate":"Donasi","docs":"Dokumentasi API"},"errors":{"email_required":"Silakan masukkan email Anda","invalid_email":"Silakan masukkan email yang valid","captcha_required":"Silakan selesaikan captcha","link_required":"Silakan tempel link verifikasi","voucher_required":"Silakan tempel link voucher","invalid_voucher":"Format link voucher tidak valid","connection_error":"Kesalahan koneksi. Silakan coba lagi.","generic_error":"Terjadi kesalahan. Silakan coba lagi."},"messages":{"email_sent":"Email verifikasi terkirim!","premium_activated":"Premium berhasil diaktifkan!","donation_success":"Terima kasih atas dukungan Anda!"},"howto":{"title":"Cara Penggunaan","step1":"Masukkan email yang ingin diupgrade","step2":"Selesaikan captcha dan klik Lanjutkan","step3":"Kami akan mengirim link verifikasi ke Inbox Anda","step4":"Salin link yang diterima (atau klik)","step5":"Tempel link dan klik Aktifkan Premium","understand":"Mengerti"},"stepper":{"step1":"Identifikasi","step2":"Verifikasi","step3":"Selesai"},"toast":{"email_required":"Silakan masukkan email Anda terlebih dahulu","turnstile_required":"Silakan selesaikan captcha","captcha_required":"Silakan selesaikan captcha","code_required":"Silakan masukkan kode verifikasi","sending":"Mengirim...","loading":"Memuat...","activating":"Mengaktifkan...","processing":"Memproses...","email_sent":"Link verifikasi terkirim ke email Anda","activation_success":"Aktivasi berhasil!","error_prefix":"Error: ","unknown_error":"Kesalahan tidak diketahui","verifying":"Memverifikasi...","success_activated":"Berhasil diaktifkan! Berakhir: ","unknown_expiry":"Tidak diketahui","voucher_required":"Silakan tempel link voucher","invalid_voucher":"Format link tidak valid. Silakan tempel link TrueMoney","donation_thanks":"Terima kasih {donor}! Diterima {amount} Baht 💝","supporter":"Pendukung","connection_error":"Kesalahan koneksi","network_error":"Kesalahan jaringan. Silakan coba lagi.","system_error":"Kesalahan sistem. Silakan coba lagi.","link_required":"Silakan masukkan link","invalid_link":"Link tidak valid","email_not_found":"Email tidak ditemukan. Silakan masukkan email di langkah 1","invalid_oobcode":"Tidak dapat mengekstrak kode verifikasi dari URL. Silakan coba lagi","failed_send":"Gagal mengirim kode verifikasi","activation_failed":"Aktivasi gagal","donation_failed":"Donasi gagal","success":"Berhasil!"},"docs":{"title":"Dokumentasi API","subtitle":"Dokumentasi Pengembang","home":"Beranda","nav":{"getting_started":"Memulai","resources":"Sumber Daya","introduction":"Pendahuluan","authentication":"Otentikasi","endpoints":"Endpoints","error_codes":"Kode Error"},"intro":{"title":"Alight Motion Premium API","description":"Integrasikan upgrade premium Alight Motion langsung ke aplikasi Anda. API kami menyediakan cara sederhana, aman, dan andal untuk memverifikasi email dan mengaktifkan langganan secara terprogram.","base_url":"Base URL"},"auth":{"title":"Otentikasi","description":"Semua permintaan API harus menyertakan header X-API-Key untuk otentikasi.","need_key_title":"Butuh API Key?","need_key_desc":"Hubungi administrator untuk meminta API Key. Key dibatasi tarif dan dipantau untuk penyalahgunaan."},"endpoints":{"title":"Endpoints","verify_email_desc":"Kirim email verifikasi ke alamat yang ditentukan untuk memulai proses upgrade","activate_desc":"Aktifkan lisensi premium menggunakan kode yang diterima di email","request_body":"Request Body","request":"Request","response":"Response"},"errors":{"title":"Kode Error","http":"HTTP","code":"Kode","description":"Deskripsi"},"error_list":{"missing_api_key":"Header permintaan kehilangan X-API-Key","invalid_api_key":"API Key tidak valid atau tidak ditemukan","disabled_key":"API Key dinonaktifkan","expired_key":"API Key telah kadaluarsa","captcha_failed":"Verifikasi Captcha gagal (Frontend saja)","wait_5min":"Tunggu 5 menit sebelum mengirim ke email yang sama","rate_limited":"Terlalu banyak permintaan dari IP ini","quota_exceeded":"Kuota penggunaan terlampaui"}},"api":{"activation_failed":"Aktivasi Gagal","email_and_code_required":"Email dan Kode diperlukan","invalid_action":"Tindakan Tidak Valid","server_error":"Kesalahan Server","invalid_or_expired_code":"Kode verifikasi tidak valid atau kadaluarsa","captcha_failed":"Verifikasi Captcha gagal","email_required":"Email diperlukan","invalid_email":"Format email tidak valid","invalid_email_address":"Alamat email tidak valid","ip_rate_limited":"Terlalu banyak permintaan dari IP ini","wait_5min":"Tunggu 5 menit sebelum mencoba lagi","failed_send":"Gagal mengirim email","quota_exceeded":"Gangguan sementara: Kuota email harian telah habis. Silakan coba lagi besok.","too_many_attempts":"Terlalu banyak percobaan login. Silakan tunggu sebentar dan coba lagi.","access_denied":"Akses ditolak","ip_banned":"IP ditangguhkan sementara karena aktivitas tidak wajar","daily_limit_exceeded":"Batas permintaan harian terlampaui. Silakan coba lagi besok.","email_sent":"Email verifikasi berhasil dikirim","request_code_event":"Pengguna meminta email verifikasi","code_sent_event":"Email verifikasi berhasil dikirim","activate_attempt_event":"Pengguna mengirim kode verifikasi","activated_success":"Premium berhasil diaktifkan","request_recovered_event":"Request baru dibuat karena requestId tidak ditemukan"}};
+        const currentLang = 'id';
         
         // Language menu toggle
         function toggleLangMenu() {
@@ -638,6 +640,5 @@
         });
     </script>
 
-
-
-</body></html>
+</body>
+</html>
